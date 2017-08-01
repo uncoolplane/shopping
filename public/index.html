@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html ng-app="eCommerce">
+  <head>
+    <meta charset="utf-8">
+    <title>Draw It</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="./js/library/ui-grid.css" />
+    <link rel="stylesheet" href="styles/animate.css">
+    <link rel="stylesheet" href="styles/shop-homepage.css">
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <div class="container">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a href="#">Home</a>
+                  </li>
+                  <li>
+                      <a href="#">Cart</a>
+                  </li>
+                  <li>
+                      <a href="#">My Orders</a>
+                  </li>
+                  <li>
+                      <a href="#">Profile</a>
+                  </li>
+                  <li>
+                      <a href="#">Contact Us</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </nav>
+  </div>
+
+    <!-- Page Content -->
+    <div class="container" id="maincontent">
+      <ui-view></ui-view>
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Core Libraries -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.6.4/angular-touch.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.0.6/ui-grid.js"></script>
+
+    <!-- Other Libraries -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js" charset="utf-8"></script>
+
+    <!-- Application -->
+    <script src="js/app.js" charset="utf-8"></script>
+
+    <!-- Services -->
+    <script src="services/cartService.js" charset="utf-8"></script>
+    <script src="services/customerService.js" charset="utf-8"></script>
+    <script src="services/loginService.js" charset="utf-8"></script>
+    <script src="services/orderItemService.js" charset="utf-8"></script>
+    <script src="services/orderService.js" charset="utf-8"></script>
+    <script src="services/productService.js" charset="utf-8"></script>
+    <script src="services/userService.js" charset="utf-8"></script>
+
+    <!-- Controllers -->
+    <script src="views/home/home.js" charset="utf-8"></script>
+    <script src="views/cart/cart.js" charset="utf-8"></script>
+    <script src="views/checkout/checkout.js" charset="utf-8"></script>
+    <script src="views/customers/customers.js" charset="utf-8"></script>
+    <script src="views/customers/customerDetails.js" charset="utf-8"></script>
+    <script src="views/orders/orders.js" charset="utf-8"></script>
+    <script src="views/orders/orderDetails.js" charset="utf-8"></script>
+    <script src="views/orders/myorders.js" charset="utf-8"></script>
+    <script src="views/products/products.js" charset="utf-8"></script>
+    <script src="views/products/productDetails.js" charset="utf-8"></script>
+    <script src="views/profile/login.js" charset="utf-8"></script>
+    <script src="views/profile/profile.js" charset="utf-8"></script>
+    <script src="views/contact/contact.js" charset="utf-8"></script>
+  </body>
+</html>
