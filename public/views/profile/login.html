@@ -1,12 +1,40 @@
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">User Name</label>
-    <input type="text" class="form-control" id="userName" placeholder="Enter email" ng-model="user.username">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password" ng-model="user.password">
-  </div>
-  <button type="submit" class="btn btn-success" ng-click="login(user)">Sign In</button>
-  <button type="button" class="btn btn-default" ng-click="cancel()">Cancel</button>
-</form>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6">
+            <div class="panel panel-default" id="login-panel">
+              <div class="panel-heading">Login</div>
+              <div class="panel-body">
+                <form name="loginForm" novalidate>
+                    <div class="form-group" ng-class="{ 'has-error': loginForm.username.$touched && loginForm.username.$invalid}">
+                      <input class="form-control" placeholder="Username/Email" id="username"
+                      name="username"
+                      ng-model="username"
+                      required></input>
+                      <div ng-messages="loginForm.username.$error" ng-show="loginForm.username.$touched">
+                        <p ng-message="required">Username is required</p>
+                      </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': loginForm.password.$touched && loginForm.password.$invalid}">
+                        <input class="form-control" placeholder="Password" type="password"
+                        id="password"
+                        name="password"
+                        ng-model="password"
+                        required></input>
+                        <div ng-messages="loginForm.password.$error" ng-show="loginForm.password.$touched">
+                          <p ng-message="required">Password is required</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-success" id="login-button"
+                      ng-disabled="loginForm.$invalid"
+                       ng-click="login(username, password, reset, loginForm)">Login</button>
+                      <button id="login-button" ui-sref="signup" class="btn btn-default">Sign Up</button>
+                      <button id="login-button" ui-sref="home" class="btn btn-default">Cancel</button>
+                    </div>
+                </form>
+
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
