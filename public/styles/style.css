@@ -10,3 +10,7 @@ a {
 #maincontent {
   margin-top: 50px
 }
+
+.form-group {
+  width: 100%;
+}

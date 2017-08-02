@@ -1,0 +1,96 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6">
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Profile
+  </div>
+  <div class="panel-body">
+    <form class="form-horizontal" role="form" name="profileForm">
+      <div class="form-group row" ng-class="{ 'has-error': profileForm.user.name.$touched && profileForm.user.name.$invalid}">
+        <label for="inputName" class="col-sm-2 control-label">First Name</label>
+        <div class="col-sm-8">
+          <input class="form-control" id="inputName" placeholder="First Name" ng-model="user.name" required>
+          <div ng-messages="profileForm.user.name.$error" ng-show="profileForm.user.name.$touched">
+            <p ng-message="required">First Name is required</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" ng-class="{ 'has-error' : profileForm.user.surname.$touched && profileForm.user.surname.$invalid}">
+        <label for="InputSurname">Surname</label>
+        <div class="col-sm-8">
+          <input type="text" name="InputSurname" placeholder="Surname" ng-model="user.surname" required>
+          <div ng-messages="profileForm.user.surname.$error" ng-show="profileForm.user.surname.$touched">
+            <p ng-message="required">Surname is required</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" ng-class="{ 'has-error': profileForm.user.email.$touched && profileForm.user.email.$invalid}">
+        <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-8">
+          <input class="form-control" id="inputEmail" placeholder="Email" ng-model="user.email" required>
+          <div ng-messages="profileForm.user.email.$error" ng-show="profileForm.user.email.$touched">
+            <p ng-message="required">Email is required</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h2>Address</h2>
+      <div class="form-group row" ng-class="{ 'has-error' : profileForm.user.address.$touched && profileForm.user.address.$invalid}">
+        <label for="inputAddress">Address</label>
+        <div class="col-sm-8">
+          <input type="text" name="inputAddress" placeholder="Address" ng-model="user.address" required>
+          <div ng-messages="profileForm.user.address.$error" ng-show="profileForm.user.address.$touched">
+            <p ng-message="required">Address is required</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" ng-class="{ 'has-error' : profileForm.user.city.$touched && profileForm.user.city.$invalid}">
+        <label for="cityInput">City</label>
+        <div class="col-sm-8">
+          <input type="text" name="cityInput" placeholder="City" ng-model="user.city" required>
+          <div ng-messages="profileForm.user.city.$error" ng-show="profileForm.user.city.$touched">
+            <p ng-message="required">City is required</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" ng-class="{ 'has-error' : profileForm.user.state.$touched && profileForm.user.state.$invalid}">
+        <label for="StateInput">State</label>
+        <div class="col-sm-8">
+          <input type="text" name="StateInput" placeholder="State" ng-model="user.state" required>
+          <div ng-messages="profileForm.user.state.$error" ng-show="profileForm.user.state.$touched">
+            <p ng-message="required">State is required</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" ng-class="{ 'has-error' : profileForm.user.zip.$touched && profileForm.user.zip.$invalid}">
+        <label for="ZipInput">Zip Code</label>
+        <div class="col-sm-8">
+          <input type="text" name="ZipInput" placeholder="Zip Code" ng-model="user.zip" required>
+          <div ng-messages="profileForm.user.zip.$error" ng-show="profileForm.user.zip.$touched">
+            <p ng-message="required">Zip Code is required</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" ng-class="{ 'has-error' : profileForm.user.phone.$touched && profileForm.user.phone.$invalid}">
+        <label for="InputPhone">Phone Number</label>
+        <div class="col-sm-8">
+          <input type="text" name="InputPhone" placeholder="Phone Number" ng-model="user.phone" required>
+          <div ng-messages="profileForm.user.phone.$error" ng-show="profileForm.user.phone.$touched">
+            <p ng-message="required">Phone Number is required</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-success" ng-click="update(user)">Update</button>
+          <button type="button" class="btn btn-default" ui-sref="home">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+  </div>
+</div>
+</div>
