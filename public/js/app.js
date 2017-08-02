@@ -27,7 +27,7 @@ angular.module('eCommerce', ['ui.router', 'ui.bootstrap', 'ui.grid', 'ngAnimate'
     templateUrl: './views/profile/login.html',
     controller: 'loginController'
   })
-  .state('customer', {
+  .state('customers', {
     url: '/customers',
     templateUrl: './views/customers/customers.html',
     controller: 'customersController'

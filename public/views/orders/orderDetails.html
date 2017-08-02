@@ -1,0 +1,85 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">Order</div>
+              <div class="panel-body">
+                <form name="orderForm" novalidate role="form">
+                  <div class="form-group row" ng-class="{ 'has-error' : orderForm.order.userid.$touched && orderForm.order.userid.$invalid}">
+                    <label for="customerInput" class="col-sm-2 control-label">Customer</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" type="text" name="customerInput" placeholder="Customer" ng-model="order.userid" required>
+                      <div ng-messages="orderForm.order.userid.$error" ng-show="orderForm.order.userid.$touched">
+                        <p ng-message="required">Customer is required</p>
+                      </div>
+                    </div>
+                  </div>
+                  <h2>Address</h2>
+                  <div class="form-group row" ng-class="{ 'has-error' : orderForm.customer.address.$touched && orderForm.customer.address.$invalid}">
+                    <label for="customerAddress" class="col-sm-2 control-label">Address</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" type="text" name="customerAddress" placeholder="Address" ng-model="customer.address" required>
+                      <div ng-messages="orderForm.customer.address.$error" ng-show="orderForm.customer.address.$touched">
+                        <p ng-message="required">Address is required</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row" ng-class="{ 'has-error' : orderForm.customer.city.$touched && orderForm.customer.city.$invalid}">
+                    <label for="cityInput" class="col-sm-2 control-label">City</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" type="text" name="cityInput" placeholder="City" ng-model="customer.city" required>
+                      <div ng-messages="orderForm.customer.city.$error" ng-show="orderForm.customer.city.$touched">
+                        <p ng-message="required">City is required</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row" ng-class="{ 'has-error' : orderForm.customer.state.$touched && orderForm.customer.state.$invalid}">
+                    <label for="stateInput" class="col-sm-2 control-label">State</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" type="text" name="stateInput" placeholder="State" ng-model="customer.stastate" required>
+                    </div>
+                    <div ng-messages="orderForm.customer.state.$error" ng-show="orderForm.customer.state.$touched">
+                      <p ng-message="required">State is required</p>
+                    </div>
+                  </div>
+                  <div class="form-group row" ng-class="{ 'has-error' : orderForm.customer.zip.$touched && orderForm.customer.zip.$invalid}">
+                    <label for="zipInput" class="col-sm-2 control-label">Zip Code</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" type="text" name="zipInput" placeholder="Zip Code" ng-model="customer.zip" required>
+                      <div ng-messages="orderForm.customer.zip.$error" ng-show="orderForm.customer.zip.$touched">
+                        <p ng-message="required">Zip Code is required</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <div class="form-group row" ng-class="{ 'has-error' : orderForm.order.orderDate.$touched && orderForm.order.orderDate.$invalid}">
+                    <label for="orderDateInput" class="col-sm-2 control-label">Order Date</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" type="text" name="orderDateInput" placeholder="Order Date" ng-model="order.orderDate" required>
+                      <div ng-messages="orderForm.order.orderDate.$error" ng-show="orderForm.order.orderDate.$touched">
+                        <p ng-message="required">Order Date is required</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row" ng-class="{ 'has-error' : orderForm.order.status.$touched && orderForm.order.status.$invalid}">
+                    <label for="statusInput" class="col-sm-2 control-label">Status</label>
+                    <div class="col-sm-8">
+                      <input class="form-control" type="text" name="statusInput" placeholder="Status" ng-model="order.status" required>
+                      <div ng-messages="orderForm.order.status.$error" ng-show="orderForm.order.status.$touched">
+                        <p ng-message="required">Status is required</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-success" ng-disabled="orderForm.$invalid"
+                     ng-click="update(order, customer)">Update</button>
+                    <button ui-sref="home" class="btn btn-default">Cancel</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
